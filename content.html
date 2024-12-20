@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容详情展示页</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        .content-section {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        .comment-section {
+            margin-top: 20px;
+        }
+        .comment-input {
+            width: 60%;
+            display: inline-block;
+        }
+        .comment-actions {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+        .comment-actions button {
+            margin-right: 10px;
+        }
+        .footer-nav {
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer-nav .nav-link {
+            color: gray;
+            text-align: center;
+        }
+        .footer-nav .nav-link.active {
+            color: red;
+        }
+        .footer-nav i {
+            font-size: 1.5rem;
+        }
+        .footer-nav span {
+            display: block;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar navbar-expand navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:history.back();">
+                <i class="bi bi-arrow-left"></i>
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo">
+            </a>
+            <form class="d-flex ms-auto">
+                <button class="btn btn-outline-secondary" type="button">
+                    关注
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container content-section">
+        <!-- 图集轮播 -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/800x400" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/800x400" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/800x400" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- 内容段落 -->
+        <div class="mt-3">
+            <p>这是一个虚构的内容段落，用于展示详细信息。这里可以放置文章的正文内容，包括文字、图片、视频等多种形式。本文档旨在展示如何使用Bootstrap框架构建一个响应式的网页布局。</p>
+            <p>Bootstrap是一个流行的前端框架，提供了丰富的组件和工具，帮助开发者快速构建美观且功能强大的网页应用。通过使用Bootstrap，我们可以轻松实现响应式设计，确保网站在各种设备上都能良好显示。</p>
+        </div>
+
+        <!-- 留言行 -->
+        <div class="comment-section">
+            <div class="d-flex align-items-center">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo me-2">
+                <input type="text" class="form-control comment-input" placeholder="留言...">
+                <div class="comment-actions">
+                    <button class="btn btn-outline-secondary">
+                        <i class="bi bi-send"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 留言互动部分 -->
+        <div class="mt-3">
+            <div class="d-flex align-items-start mb-3">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo me-2">
+                <div>
+                    <p class="mb-0"><strong>用户1</strong></p>
+                    <p>这是一条虚构的留言内容，用于展示留言互动部分。</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo me-2">
+                <div>
+                    <p class="mb-0"><strong>用户2</strong></p>
+                    <p>这是一条虚构的留言内容，用于展示留言互动部分。</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo me-2">
+                <div>
+                    <p class="mb-0"><strong>用户3</strong></p>
+                    <p>这是一条虚构的留言内容，用于展示留言互动部分。</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo me-2">
+                <div>
+                    <p class="mb-0"><strong>用户4</strong></p>
+                    <p>这是一条虚构的留言内容，用于展示留言互动部分。</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start mb-3">
+                <img src="https://placehold.co/40x40" alt="User Avatar" class="logo me-2">
+                <div>
+                    <p class="mb-0"><strong>用户5</strong></p>
+                    <p>这是一条虚构的留言内容，用于展示留言互动部分。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <nav class="navbar navbar-light footer-nav fixed-bottom">
+        <div class="container-fluid d-flex justify-content-around">
+            <button class="btn btn-link nav-link active">
+                <i class="bi bi-hand-thumbs-up-fill"></i>
+                <span>点赞 123</span>
+            </button>
+            <button class="btn btn-link nav-link">
+                <i class="bi bi-bookmark-fill"></i>
+                <span>收藏 45</span>
+            </button>
+            <button class="btn btn-link nav-link">
+                <i class="bi bi-chat-fill"></i>
+                <span>留言 67</span>
+            </button>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
